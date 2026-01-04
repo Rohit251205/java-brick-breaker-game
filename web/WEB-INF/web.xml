@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+         version="3.1">
+
+    <display-name>JavaGame</display-name>
+
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>GameLauncherServlet</servlet-name>
+        <servlet-class>servlets.GameLauncherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GameLauncherServlet</servlet-name>
+        <url-pattern>/GameLauncherServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LeaderboardServlet</servlet-name>
+        <servlet-class>servlets.LeaderboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LeaderboardServlet</servlet-name>
+        <url-pattern>/LeaderboardServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateScoreServlet</servlet-name>
+        <servlet-class>servlets.UpdateScoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateScoreServlet</servlet-name>
+        <url-pattern>/UpdateScoreServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
